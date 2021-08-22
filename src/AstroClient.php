@@ -104,7 +104,7 @@ class AstroClient
 
     public function getHouseCuspTropical($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone)
     {
-        $resourceName = 'cusp/tropical';
+        $resourceName = 'house_cusps/tropical';
         $data = $this->packageHoroData($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone);
         $response = getCurlReponse($this->userId, $this->apiKey, $resourceName, $data, $this->language);
         return $response;
