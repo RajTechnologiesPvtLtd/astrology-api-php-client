@@ -8,6 +8,7 @@ REST Web Service Interface API for Astrology / #Jyotish
 Astrology API is based on REST principles, it's very easy to write and test applications. You can use your browser to access URLs, and you can use pretty much any HTTP client in any programming language to interact with the API.
 
 Authentication For Astrology APIs 
+
 Users of the Astrology REST API can authenticate by providing a user ID and KEY for using with the HTTP POST method. 
 
 When using basic authentication over HTTPS, you should send authentication credentials with every request to the Astrology REST API, since the service doesn't include an explicit login method or track a session token.
