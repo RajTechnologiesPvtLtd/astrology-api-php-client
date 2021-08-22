@@ -57,15 +57,112 @@ class AstroClient
         );
     }
 
-    //*****************Basic Astro****************//
+	//***************** Birth Detail ****************//
 
-    public function getPlanetsDetails($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone)
+    public function getBirthDetails($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone)
+    {
+        $resourceName = 'birth_details';
+        $data = $this->packageHoroData($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone);
+        $response = getCurlReponse($this->userId, $this->apiKey, $resourceName, $data, $this->language);
+        return $response;
+    }
+
+    //*****************Basic Astro ****************//
+
+    public function getAstroDetails($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone)
+    {
+        
+	   $resourceName = 'astro_details';
+        $data = $this->packageHoroData($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone);
+        $response = getCurlReponse($this->userId, $this->apiKey, $resourceName, $data, $this->language);
+        return $response;
+    }
+    
+	public function getPlanetsDetails($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone)
     {
 		$resourceName = 'planets';
 		$data = $this->packageHoroData($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone);
 		$response = getCurlReponse($this->userId, $this->apiKey, $resourceName, $data, $this->language);
 		return $response;
     }
+	
+    public function getPlanetsExtendedDetails($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone)
+    {
+        $resourceName = 'planets/extended';
+        $data = $this->packageHoroData($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone);
+        $response = getCurlReponse($this->userId, $this->apiKey, $resourceName, $data, $this->language);
+        return $response;
+    }
 
+    public function getPlanetsTropicalDetails($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone)
+    {
+        $resourceName = 'planets/tropical';
+        $data = $this->packageHoroData($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone);
+        $response = getCurlReponse($this->userId, $this->apiKey, $resourceName, $data, $this->language);
+        return $response;
+    }
 
+    public function getHouseCuspTropical($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone)
+    {
+        $resourceName = 'cusp/tropical';
+        $data = $this->packageHoroData($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone);
+        $response = getCurlReponse($this->userId, $this->apiKey, $resourceName, $data, $this->language);
+        return $response;
+    }
+	
+	//***************** ayanamsha ****************//
+	
+    public function getAyanamsha($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone)
+    {
+        $resourceName = 'ayanamsha';
+        $data = $this->packageHoroData($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone);
+        $response = getCurlReponse($this->userId, $this->apiKey, $resourceName, $data, $this->language);
+        return $response;
+    }
+	
+	
+    //***************** Panchang ****************//
+    public function getBasicPanchang($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone)
+    {
+        $resourceName = 'basic_panchang';
+        $data = $this->packageHoroData($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone);
+        $response = getCurlReponse($this->userId, $this->apiKey, $resourceName, $data, $this->language);
+        return $response;
+    }
+
+    public function getPlanetPanchang($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone)
+    {
+        $resourceName = 'planet_panchang';
+        $data = $this->packageHoroData($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone);
+        $response = getCurlReponse($this->userId, $this->apiKey, $resourceName, $data, $this->language);
+        return $response;
+    }
+
+    public function getAdvancedPanchang($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone)
+    {
+        $resourceName = 'advanced_panchang';
+        $data = $this->packageHoroData($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone);
+        $response = getCurlReponse($this->userId, $this->apiKey, $resourceName, $data, $this->language);
+        return $response;
+    }
+
+	//***************** Muhurat ****************//	
+
+    public function getChaughadiyaMuhurta($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone)
+    {
+        $resourceName = 'chaughadiya_muhurta';
+        $data = $this->packageHoroData($date, $month, $year, 0, 0, 0, $latitude, $longitude, $timezone);
+        $response = getCurlReponse($this->userId, $this->apiKey, $resourceName, $data, $this->language);
+        return $response;
+    }
+
+    public function getHoraMuhurta($date, $month, $year, $hour, $minute, $second, $latitude, $longitude, $timezone)
+    {
+        $resourceName = 'hora_muhurta';
+        $data = $this->packageHoroData($date, $month, $year, 0, 0,0, $latitude, $longitude, $timezone);
+        $response = getCurlReponse($this->userId, $this->apiKey, $resourceName, $data, $this->language);
+        return $response;
+    }
+	
+	
 }
