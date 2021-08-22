@@ -1,7 +1,7 @@
 # astrology-api-php-client
 #Astrology API 
 
-From my experience as a senior product designer and programmer, there is almost nothing more important than the correct Astrology tools to create a nice user interface. These Aastrology APIs From my programming experience does all the complex astronomical and algorithmic calculations for your astrology/jyotish websites/app or astro-matching website/apps.
+From my experience as a senior product designer and programmer, there is almost important  the correct Astrology tools to create a nice user interface with accurate Astronomical and hindu astrology calculation. These Aastrology APIs From my programming experience does all the complex astronomical and algorithmic calculations for your astrology/jyotish websites/app or astro-matching website/apps.
 
 REST Web Service Interface API for Astrology / #Jyotish 
 
