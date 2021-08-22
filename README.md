@@ -13,8 +13,8 @@ Users of the Astrology REST API can authenticate by providing a user ID and KEY 
 
 When using basic authentication over HTTPS, you should send authentication credentials with every request to the Astrology REST API, since the service doesn't include an explicit login method or track a session token.
 
-To create an API key you simple login at brahmsamaj.org/astrology. Our automate process creaate user id and KEY for you. Its free Astrology APIs, no need to purchase or subscribe.
+To create an API key you simple login at brahmsamaj.org/astrology. Our automate process create user id and KEY for you. Its free Astrology APIs, no need to purchase or subscribe.
 
 Official Astrology API Clients:
 
-We have an official github account which maintains the official API clients written in various languages. 
+We have an official github account which maintains the official API clients written in various languages (eg. PHP/ java / json / flutter ). 
