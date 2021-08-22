@@ -32,7 +32,7 @@ function getCurlReponse($userId, $apiKey, $resource, array $data, $language)
 
 	// Set custom headers for Auth and Content-Type header
 	// curl_setopt($curl, CURLOPT_HTTPHEADER, [
-	  // 'X-AstroAPI-Host: kvstore.p.rapidapi.com',
+	  // 'X-AstroAPI-Host: brahmsamajj.org',
 	  // 'X-AstroAPI-Key: 7xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
 	  // 'Content-Type: application/json'
 	// ]);
